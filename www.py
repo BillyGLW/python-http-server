@@ -109,11 +109,6 @@ class Handler(threading.Thread):
     self.s.shutdown(socket.SHUT_RDWR)
     self.s.close()
 
-
-
-   
-
-
 def main():
   server = gsocket(socket.AF_INET, socket.SOCK_STREAM)
   server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -127,7 +122,6 @@ def main():
     th = Handler(conn, addr)
     th.daemon = False
     th.start()
-
 
 if __name__ == "__main__":
   main()
