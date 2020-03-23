@@ -1,13 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python2
+
 import sys
 import os
 import socket
 import telnetlib 
 import threading
 from struct import pack, unpack
-
-# TheAifam5: https://docs.python.org/2/library/mimetypes.html
-
 
 def recvuntil(sock, txt):
   d = ""
